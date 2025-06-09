@@ -3,7 +3,7 @@ import os
 import requests
 from configs import config_path, app_location, ip_check_url
 
-def get_all_vpn_list():
+def get_all_server_list():
     return os.listdir(config_path)
 
 def connect_new_vpn(vpn_name):

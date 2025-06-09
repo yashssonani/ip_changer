@@ -37,10 +37,6 @@ def save_new_file(source_path, file_name, destination_path):
 
 k = os.listdir(all_file_path)
 
-for i in k:
-    file_path = os.path.join(all_file_path, i)
-    save_new_file(file_path, i, config_path)
-
 def get_udp_tcp_list():
     udp_list = {}
     tcp_list = {}
@@ -64,3 +60,8 @@ def get_udp_tcp_list():
     #     save_new_file(ll, kk, config_path )
 
     return udp_list, tcp_list
+
+
+for i in k:
+    file_path = os.path.join(all_file_path, i)
+    save_new_file(file_path, i, config_path)
