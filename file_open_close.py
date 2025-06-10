@@ -34,12 +34,10 @@ def save_new_file(source_path, file_name, destination_path):
     except:
         print(file_name)
 
-
-k = os.listdir(all_file_path)
-
 def get_udp_tcp_list():
     udp_list = {}
     tcp_list = {}
+    k = os.listdir(all_file_path)
     for i in k:
         file_path = os.path.join(all_file_path, i)
         # print(file_path)
@@ -47,21 +45,9 @@ def get_udp_tcp_list():
             udp_list[i]=file_path
         elif i.endswith('tcp.ovpn'):
             tcp_list[i]=file_path
-        
-    # print(udp_list.items())
-
-    # for i in  list(tcp_list.items())[:5]:
-    #     kk, ll = i
-    #     save_new_file(ll, kk, config_path )
-
-
-    # for i in list(udp_list.items())[:5]:
-    #     kk, ll = i
-    #     save_new_file(ll, kk, config_path )
-
     return udp_list, tcp_list
 
-
+k = os.listdir(all_file_path)
 for i in k:
     file_path = os.path.join(all_file_path, i)
     save_new_file(file_path, i, config_path)
